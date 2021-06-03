@@ -1,40 +1,38 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Bless Fizzi</title>
-    <meta
-      name="description"
-      content="Time since Fizzi blessed the world with rollback netplay"
-    />
-    <link rel="stylesheet" type="text/css" href="styles.css" />
-  </head>
-  <body>
-    <div id="container">
-      <h2>Time since Fizzi blessed the world with rollback netplay</h2>
-      <h1 id="countdown"></h1>
-      <blockquote class="twitter-tweet">
-        <p lang="en" dir="ltr">
-          Melee community. Welcome to the era of rollback. After seven months of
-          full-time work, the newest Dolphin build from Slippi brings you:<br /><br />✅
-          Rollback netcode<br />✅ Integrated matchmaking<br />✅
-          Auto-updates<br />✅ Replays<br /><br />Try it out now →
-          <a href="https://t.co/yIeAISC3Tj">https://t.co/yIeAISC3Tj</a>
-          <a href="https://t.co/9hS7KvlAh8">pic.twitter.com/9hS7KvlAh8</a>
-        </p>
-        &mdash; FIZZI#36 (@Fizzi36)
-        <a
-          href="https://twitter.com/Fizzi36/status/1275096470765490176?ref_src=twsrc%5Etfw"
-          >June 22, 2020</a
-        >
-      </blockquote>
-    </div>
-    <script
-      async
-      src="https://platform.twitter.com/widgets.js"
-      charset="utf-8"
-    ></script>
-    <script src="./scripts.js"></script>
-  </body>
+
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Bless Fizzi</title>
+  <meta name="description" content="Time since Fizzi blessed the world with rollback netplay" />
+  <link rel="stylesheet" type="text/css" href="balloons.css" />
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+
+<body>
+  <canvas id="canvas_confetti" width="600px" height="400px"></canvas>
+  <div class="balloons balloons-left"></div>
+  <div class="balloons balloons-right"></div>
+  <div id="container">
+    <h2>Time since Fizzi blessed the world with rollback netplay</h2>
+    <h1 id="countdown"></h1>
+    <blockquote class="twitter-tweet">
+      <p lang="en" dir="ltr">
+        Melee community. Welcome to the era of rollback. After seven months of
+        full-time work, the newest Dolphin build from Slippi brings you:<br /><br />✅
+        Rollback netcode<br />✅ Integrated matchmaking<br />✅
+        Auto-updates<br />✅ Replays<br /><br />Try it out now →
+        <a href="https://t.co/yIeAISC3Tj">https://t.co/yIeAISC3Tj</a>
+        <a href="https://t.co/9hS7KvlAh8">pic.twitter.com/9hS7KvlAh8</a>
+      </p>
+      &mdash; FIZZI#36 (@Fizzi36)
+      <a href="https://twitter.com/Fizzi36/status/1275096470765490176?ref_src=twsrc%5Etfw">June 22, 2020</a>
+    </blockquote>
+  </div>
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <script src="./balloons.js"></script>
+  <script src="./scripts.js"></script>
+</body>
+
 </html>

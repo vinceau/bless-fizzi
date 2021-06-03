@@ -18,11 +18,25 @@ function getTimeRemaining(endtime) {
   };
 }
 
+function isAnniversary(result) {
+  // Show anniversary notice for around 3 days
+  return result.days <= 2;
+}
+
 function updateCountdown() {
   const result = getTimeRemaining(announcementTimestamp);
   const { years, days, hours, minutes, seconds } = result;
   const format = `${years} years, ${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`;
   document.querySelector("#countdown").innerHTML = format;
+
+  // Check if it's anniversary
+  if (isAnniversary(result)) {
+    startConfetti();
+    showBalloons();
+  } else {
+    stopConfetti();
+    hideBalloons();
+  }
 }
 
 const interval = setInterval(updateCountdown, 1000);
