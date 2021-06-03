@@ -26,7 +26,10 @@ function isAnniversary(result) {
 function updateCountdown() {
   const result = getTimeRemaining(announcementTimestamp);
   const { years, days, hours, minutes, seconds } = result;
-  const format = `${years} years, ${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`;
+  let format = `${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`;
+  if (years > 0) {
+    format = `${years} years, ` + format;
+  }
   document.querySelector("#countdown").innerHTML = format;
 
   // Check if it's anniversary
